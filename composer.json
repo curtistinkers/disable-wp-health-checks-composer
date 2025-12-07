@@ -37,6 +37,8 @@
         }
     },
     "scripts": {
-        "lint" : "phpcs --standard=WordPress --colors *.php"
+        "phpcs" : "phpcs",
+		"lint" : "@phpcs",
+		"phpstan" : "phpstan analyse"
     }
 }
