@@ -1,7 +1,7 @@
 parameters:
 	level: 10
 	paths:
-		- wordpress-plugin-template.php
+		- disable-wp-health-checks-composer.php
 		- src/
 
 	checkTooWideReturnTypesInProtectedAndPublicMethods: true
