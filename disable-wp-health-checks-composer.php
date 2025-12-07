@@ -25,9 +25,9 @@ declare(strict_types=1);
  *
  * @since 1.0.0
  *
- * @param array[] $tests Array of WordPress health check tests.
+ * @param array<array<string>> $tests Array of WordPress health check tests.
  *
- * @return array[] Array containing remaining tests
+ * @return array<array<string>> Array containing remaining tests
  */
 function disable_wp_health_checks_composer( array $tests ): array {
 
