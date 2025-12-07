@@ -29,7 +29,7 @@ declare(strict_types=1);
  *
  * @return array[] Array containing remaining tests
  */
-function disable_wp_health_checks_composer_background_updates( array $tests ): array {
+function disable_wp_health_checks_composer( array $tests ): array {
 
 	// Disables the Background Updates health check.
 	unset( $tests['async']['background_updates'] );
@@ -37,4 +37,4 @@ function disable_wp_health_checks_composer_background_updates( array $tests ): a
 	return $tests;
 }
 
-add_filter( 'site_status_tests', 'disable_wp_health_checks_composer_background_updates' );
+add_filter( 'site_status_tests', 'disable_wp_health_checks_composer' );
