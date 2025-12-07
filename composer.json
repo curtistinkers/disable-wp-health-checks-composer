@@ -1,7 +1,7 @@
 {
     "name": "curtistinkers/disable-wp-health-checks-composer",
     "description": "",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "type": "wordpress-muplugin",
     "keywords": [ "wordpress", "composer", "health-checks" ],
     "homepage": "https://github.com/curtistinkers/disable-wp-health-checks-composer",
@@ -22,18 +22,17 @@
         "php": ">=7.0"
     },
     "require-dev": {
-        "wp-coding-standards/wpcs": "^3.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "Curtistinkers\\DisableWpHealthChecksComposer\\": "src/"
-        }
-    },
+		"wp-coding-standards/wpcs": "^3.0",
+		"phpstan/extension-installer": "^1.4",
+		"phpstan/phpstan-strict-rules": "^2.0",
+		"szepeviktor/phpstan-wordpress": "^2.0"
+	},
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
         "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+			"phpstan/extension-installer": true
         }
     },
     "scripts": {
