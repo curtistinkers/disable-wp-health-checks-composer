@@ -1,0 +1,13 @@
+{
+    "cSpell.words": [
+        "analyse",
+        "dealerdirect",
+        "phpcs",
+        "phpstan",
+        "szepeviktor",
+        "wpcs"
+    ],
+    "files.associations": {
+        "LICENSE": "plaintext"
+    }
+}
