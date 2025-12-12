@@ -1,8 +1,9 @@
 parameters:
-	level: 10
+	level: max
 	paths:
 		- disable-wp-health-checks-composer.php
 		- src/
+		- tests/
 
 	checkTooWideReturnTypesInProtectedAndPublicMethods: true
 	checkUninitializedProperties: true

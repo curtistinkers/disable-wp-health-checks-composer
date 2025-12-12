@@ -1,40 +1,23 @@
 <?php
 /**
- * Disable WordPress Health Checks Composer
- *
- * Disables built-in WordPress health checks that aren't useful when using
- * Composer to manage your WordPress site.
+ * Plugin Name: Disable WordPress Health Checks Composer
+ * Plugin URI:  https://github.com/curtistinkers/disable-wp-health-checks-composer
+ * Description: Disables unnecessary health checks for Composer managed projects
+ * Version:     2.0.0-dev
+ * Author:      curtistinkers
+ * Author URI:  https://curtistinkers.com/
+ * License:     MIT
  *
  * @package disable_wp_health_checks_composer
  */
 
 declare(strict_types=1);
 
-/**
- * Plugin Name: Disable WordPress Health Checks Composer
- * Plugin URI:  https://github.com/curtistinkers/disable-wp-health-checks-composer
- * Description: Disables unneccesary health checks for Composer managed projects
- * Version:     1.0.2
- * Author:      curtistinkers
- * Author URI:  https://curtistinkers.com/
- * License:     MIT
- */
-
-/**
- * Disables superfluous health checks.
- *
- * @since 1.0.0
- *
- * @param array<array<string>> $tests Array of WordPress health check tests.
- *
- * @return array<array<string>> Array containing remaining tests
- */
-function disable_wp_health_checks_composer( array $tests ): array {
-
-	// Disables the Background Updates health check.
-	unset( $tests['async']['background_updates'] );
-
-	return $tests;
+if ( ! defined( 'ABSPATH' ) ) {
+	throw new \RuntimeException( 'Direct access to this file is not allowed.' );
 }
 
-add_filter( 'site_status_tests', 'disable_wp_health_checks_composer' );
+require_once __DIR__ . '/src/functions.php';
+
+// Add a filter to disable unnecessary health checks.
+add_filter( 'site_status_tests', 'disable_wp_health_checks_composer' ); /* @phpstan-ignore function.resultUnused */
