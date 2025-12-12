@@ -10,8 +10,16 @@ declare(strict_types=1);
 namespace {
     // Mock add_filter to avoid WordPress dependency.
     if (! function_exists('add_filter')) {
+
         /**
          * Mock add_filter function for testing.
+         *
+         * @param string   $hook_name     The name of the filter hook.
+         * @param callable $callback      The callback to be run.
+         * @param int      $priority      The priority of the callback.
+         * @param int      $accepted_args The number of arguments the callback accepts.
+         *
+         * @return true    Function always returns true.
          */
         function add_filter( string $hook_name, callable $callback, int $priority = 10, int $accepted_args = 1 ): true {
             // No-op for testing.

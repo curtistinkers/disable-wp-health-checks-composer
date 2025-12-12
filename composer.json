@@ -19,7 +19,7 @@
 		"source": "https://github.com/curtistinkers/disable-wp-health-checks-composer"
 	},
 	"require": {
-		"php": ">=8.1"
+		"php": ">=8.2"
 	},
 	"require-dev": {
 		"wp-coding-standards/wpcs": "^3.0",
