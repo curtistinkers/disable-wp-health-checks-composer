@@ -16,7 +16,7 @@ final class AbspathTest extends TestCase
      *
      * @runInSeparateProcess
      */
-    public function test_plugin_throws_when_abspath_not_defined(): void
+    public function testPluginThrowsExceptionWhenAbspathNotDefined(): void
     {
         $this->expectException(\RuntimeException::class);
         $this->expectExceptionMessage('Direct access to this file is not allowed.');

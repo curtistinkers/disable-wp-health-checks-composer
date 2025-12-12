@@ -49,7 +49,7 @@ namespace DisableWpHealthChecksComposer\Tests {
         /**
          * Test that the background_updates test is disabled.
          */
-        public function test_disables_background_updates_check(): void {
+        public function testDisableBackgroundUpdatesCheck(): void {
 
             // Include the plugin file to load the function.
             require_once __DIR__ . '/../disable-wp-health-checks-composer.php';
@@ -98,7 +98,7 @@ namespace DisableWpHealthChecksComposer\Tests {
         /**
          * Test that the function returns the array unchanged if background_updates is not present.
          */
-        public function test_returns_unchanged_if_no_background_updates(): void {
+        public function testReturnsUnchangedIfNoBackgroundUpdates(): void {
 
             // Include the plugin file to load the function.
             require_once __DIR__ . '/../disable-wp-health-checks-composer.php';

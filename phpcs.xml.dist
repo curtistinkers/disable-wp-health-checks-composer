@@ -2,15 +2,27 @@
 <ruleset name="DisableWpHealthChecksComposerCodingStandards">
 	<description>WordPress coding standards for plugin files and PSR-12 coding standards for test files</description>
 
-	<!-- Use WordPress coding standard -->
+  <!-- Use PSR-12 coding standard except where overridden -->
+	<rule ref="PSR12"/>
+
+  <!-- Apply WordPress coding standard to all files except test files -->
 	<rule ref="WordPress">
 		<exclude-pattern>/tests/*</exclude-pattern>
 	</rule>
 
-	<rule ref="PSR12">
+  <rule ref="Generic.WhiteSpace.DisallowTabIndent.TabsUsed">
 		<exclude-pattern>/disable-wp-health-checks-composer.php</exclude-pattern>
 		<exclude-pattern>/src/*</exclude-pattern>
-		<exclude name="PSR1.Methods.CamelCapsMethodName.NotCamelCaps"/>
+	</rule>
+
+  <rule ref="PSR2.Methods.FunctionCallSignature">
+		<exclude-pattern>/disable-wp-health-checks-composer.php</exclude-pattern>
+		<exclude-pattern>/src/*</exclude-pattern>
+	</rule>
+
+	<rule ref="PSR12.ControlStructures.ControlStructureSpacing">
+		<exclude-pattern>/disable-wp-health-checks-composer.php</exclude-pattern>
+		<exclude-pattern>/src/*</exclude-pattern>
 	</rule>
 
 	<!-- Enable color output -->
