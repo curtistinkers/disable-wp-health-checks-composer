@@ -21,7 +21,9 @@
 
 	<!-- Define the directories to be checked -->
 	<arg name="encoding" value="utf8" />
-	<file>.</file>
+	<file>disable-wp-health-checks-composer.php</file>
+	<file>src/</file>
+	<file>tests/</file>
 
 	<!-- Exclude the vendor directory -->
 	<exclude-pattern>*/vendor/*</exclude-pattern>

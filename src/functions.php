@@ -14,9 +14,9 @@ declare(strict_types=1);
  *
  * @since 1.0.0
  *
- * @param array<array<string>> $tests Array of WordPress health check tests.
+ * @param array<string,array<string,array<string,string>>> $tests Array of WordPress health check tests.
  *
- * @return array<array<string>> Array containing remaining tests
+ * @return array<string,array<string,array<string,string>>> Array containing remaining tests
  */
 function disable_wp_health_checks_composer( array $tests ): array {
 	// Disables the Background Updates health check.

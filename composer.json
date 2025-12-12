@@ -45,6 +45,7 @@
 		"lint": "@phpcs",
 		"lint:fix": "@phpcbf",
 		"test": "@phpunit",
-		"coverage": "@phpunit --coverage-text"
+		"coverage": "@phpunit --coverage-text",
+    "full-test": ["@lint", "@phpstan", "@test"]
 	}
 }
