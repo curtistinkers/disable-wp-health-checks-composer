@@ -3,7 +3,7 @@
  * Plugin Name: Disable WordPress Health Checks Composer
  * Plugin URI:  https://github.com/curtistinkers/disable-wp-health-checks-composer
  * Description: Disables unnecessary health checks for Composer managed projects
- * Version:     1.0.2
+ * Version:     2.0.0-dev
  * Author:      curtistinkers
  * Author URI:  https://curtistinkers.com/
  * License:     MIT

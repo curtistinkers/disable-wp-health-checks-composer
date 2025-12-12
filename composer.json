@@ -1,7 +1,7 @@
 {
 	"name": "curtistinkers/disable-wp-health-checks-composer",
 	"description": "Disables unnecessary health checks for Composer managed projects",
-	"version": "1.0.2",
+	"version": "2.0.0-dev",
 	"type": "wordpress-muplugin",
 	"keywords": [ "wordpress", "composer", "health-checks" ],
 	"homepage": "https://github.com/curtistinkers/disable-wp-health-checks-composer",
@@ -19,7 +19,7 @@
 		"source": "https://github.com/curtistinkers/disable-wp-health-checks-composer"
 	},
 	"require": {
-		"php": ">=7.0"
+		"php": ">=8.1"
 	},
 	"require-dev": {
 		"wp-coding-standards/wpcs": "^3.0",
