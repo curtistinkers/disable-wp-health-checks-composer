@@ -1,21 +1,27 @@
 <?xml version="1.0"?>
-<ruleset name="WordPressCodingStandard">
-	<description>WordPress coding standards for plugins</description>
+<ruleset name="DisableWpHealthChecksComposerCodingStandards">
+	<description>WordPress coding standards for plugin files and PSR-12 coding standards for test files</description>
 
 	<!-- Use WordPress coding standard -->
-	<rule ref="WordPress" />
+	<rule ref="WordPress">
+		<exclude-pattern>/tests/*</exclude-pattern>
+	</rule>
+
+	<rule ref="PSR12">
+		<exclude-pattern>/disable-wp-health-checks-composer.php</exclude-pattern>
+		<exclude-pattern>/src/*</exclude-pattern>
+		<exclude name="PSR1.Methods.CamelCapsMethodName.NotCamelCaps"/>
+	</rule>
 
 	<!-- Enable color output -->
 	<arg name="colors" />
 
 	<!-- Show progress -->
 	<arg value="ps" />
-	<config name="show_progress" value="1" />
 
 	<!-- Define the directories to be checked -->
 	<arg name="encoding" value="utf8" />
 	<file>.</file>
-	<file>src</file>
 
 	<!-- Exclude the vendor directory -->
 	<exclude-pattern>*/vendor/*</exclude-pattern>
